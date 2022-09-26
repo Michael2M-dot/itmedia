@@ -22,7 +22,7 @@ var init = new Powerange(rangeQtySlider, {
   max:20,
   step:1,
   start: 10,
-  hideRange: true,
+  hideRange: false,
   klass: 'slider',
 });
 
@@ -32,10 +32,11 @@ var init = new Powerange(rangeMonthsSlider, {
   max:24,
   step:1,
   start: 12,
-  hideRange: true,
+  hideRange: false,
   klass: 'slider',
 });
 
+// Устанавливаем значения в поля
 const setValue = (input, range) => {
   input.textContent = range.value;
 }
