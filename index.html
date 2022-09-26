@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <div class="baner">
+        <img
+          src="./img/UZI_bg.png"
+          alt="Банер акция"
+          class="baner__background"
+        />
+        <div class="baner__container">
+          <div class="baner__title-container">
+            <h3 class="baner__title">УЗИ</h3>
+            <!-- /.baner__title -->
+            <img src="./img/+.png" alt="Знак плюс" class="baner__title-sign" />
+            <p class="baner__subtitle">Консультация Гинеколога</p>
+          </div>
+          <!-- /.baner__title-container -->
+          <div class="baner__price">за <span>1800</span></div>
+        <!-- /.baner__price -->
+        <div class="baner__footer">
+          <img class="baner__footer-img" src="./img/Star.png" alt='звездочка'/>
+          <h3 class="baner__footer-text">врач высшей категории</р3>
+          <!-- /.baner__titlke -->
+          <!-- /.baner__footer-symbol -->
+        </div>
+        <!-- /.baner__footer -->
+        </div>
+        <!-- /.banner__container -->
+      </div>
+      <!-- /.baner -->
+      <div class="calc">
+        <img
+          src="./img/calc_bg.png"
+          alt="фон для калькулятора"
+          class="calc__background"
+        />
+        <div class="calc__container">
+          <h2 class="calc__title">Калькулятор стоимости</h2>
+          <!-- /.calc__title -->
+          <form action="#" class="calc__form">
+            <div class="calc__inputs">
+              <fieldset class="calc__fieldset calc__fieldset_input">
+                <lable class="calc__lable" for="type">Тип бытовки</lable>
+                <!-- /.calc__lable -->
+                <select name="type" id="type" class="calc__select-input">
+                  <i class="icon-angle-down"></i>
+                  <option value="Тип 1" class="calc__input-option">Тип 1</option>
+                  <!-- /.calc__input-option -->
+                  <option value="Тип 2" class="calc__input-option">Тип 2</option>
+                  <!-- /.calc__input-option -->
+                  <option value="Тип 3" class="calc__input-option">Тип 3</option>
+                  <!-- /.calc__input-option -->
+                </select>
+                <!-- /#.calc__select-input -->
+              </fieldset>
+              <!-- /.calc__fieldset -->
+              <fieldset class="calc__fieldset calc__fieldset_input">
+                <lable class="calc__lable">Расстояние от КАД</lable>
+                <!-- /.calc__lable -->
+                <select
+                  name="distance"
+                  id="distance"
+                  class="calc__select-input"
+                >
+                  <option value="5" class="calc__input-option">5км</option>
+                  <!-- /.calc__input-option -->
+                  <option value="10" class="calc__input-option">10км</option>
+                  <!-- /.calc__input-option -->
+                  <option value="15" class="calc__input-option">15км</option>
+                  <!-- /.calc__input-option -->
+                </select>
+                <!-- /#.calc__select-input -->
+              </fieldset>
+              <!-- /.calc__fieldset -->
+            </div>
+            <!-- /.calc__inputs -->
+            <fieldset class="calc__fieldset calc__fieldset_sliders">
+              <lable class="calc__lable"
+                >Срок аренды, месяцев
+                <span class="calc__lable-range" id="months"></span>
+              </lable>
+              <!-- /.calc__lable -->
+              <ul class="calc__range-lables">
+                <li class="calc__range-lable">1</li>
+                <!-- /.calc__range-lable -->
+                <li class="calc__range-lable">6</li>
+                <!-- /.calc__range-lable -->
+                <li class="calc__range-lable">12</li>
+                <!-- /.calc__range-lable -->
+                <li class="calc__range-lable">18</li>
+                <!-- /.calc__range-lable -->
+                <li class="calc__range-lable">24</li>
+                <!-- /.calc__range-lable -->
+              </ul>
+              <!-- /.calc__range-lables -->
+              <input
+                type="text"
+                name="months"
+                id="range-months"
+                min="1"
+                max="24"
+                step="1"
+                value="12"
+              />
+            </fieldset>
+            <!-- /.calc__fieldset -->
+            <fieldset class="calc__fieldset calc__fieldset_sliders">
+              <lable class="calc__lable"
+                >Кол-во бытовок, шт
+                <span class="calc__lable-range" id="qty"></span>
+              </lable>
+              <!-- /.calc__lable -->
+              <input
+                type="text"
+                name="qts"
+                id="range-qty"
+                min="1"
+                max="20"
+                step="1"
+                value="5"
+              />
+            </fieldset>
+            <!-- /.calc__fieldset -->
+            <button type='button' class="calc__btn" id="calc-btn">заказать</button>
+          </form>
+        </div>
+        <!-- /.calc__container -->
+      </div>
+      <!-- /.calc -->
+      <div class="popup" id="popup">
+          <div class="popup__container">
+            <div class="popup__header">
+              <p class="icon-phone popup__header-img"></p>
+              <h4 class="popup__header-title">Заказать расчет</h4>
+              <p class="icon-cancel popup__header-icon-close" id="popup-icon-close"></p>
+            </div>
+            <!-- /.popup__header -->
+            <div class="input-container">
+              <label class="input">
+                <div class="input__field-container">
+                  <p class="icon-user input__icon"></p>
+                  <input type="text" class="input__field" id="user-name" placeholder="Ваше имя" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="input">
+                <div class="input__field-container">
+                  <p class="icon-phone input__icon"></p>
+                  <input type="text" class="input__field" id="user-phone" placeholder="Номер телефона" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="input">
+                <div class="input__field-container">
+                  <h3 class="input__label">Тип бытовки</h3>
+                  <input type="text" class="input__field" id="type-value" placeholder="" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="input">
+                <div class="input__field-container">
+                  <h3 class="input__label">Расстояние до КАД</h3>
+                  <input type="text" class="input__field" id="distance-value" placeholder="" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="input">
+                <div class="input__field-container">
+                  <h3 class="input__label">Срок аренды</h3>
+                  <input type="text" class="input__field" id="rent-time" placeholder="" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="input">
+                <div class="input__field-container">
+                  <h3 class="input__label">Кол-во бытовок</h3>
+                  <input type="text" class="input__field" id="qty-value" placeholder="" required>
+                </div>
+              </label>
+              <!-- /.input -->
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" name="confirmed" value="" id="checkbox-user">
+                <div class="checkbox__container">
+                  <div class="checkbox__control">
+                    <svg class="checkbox__icon">
+                        <use xlink:href="../img/icons_sprite.svg#icon_checkbox-check"/>
+                    </svg>
+                  </div>
+                  <div class="checkbox__title">Я согласен на обработку персональных данных</div>
+                </div>
+              </label>
+              <button type="button" class="popup__btn popup__btn_disabled" id="popup-submit-btn" disabled>отправить</button>
+            </div>
+            <!-- /.input-container -->
+          </div>
+          <!-- /.popup__container -->
+        </div>
+        <!-- /.popup -->
+    </div>
+    <!-- /.container -->
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="js/vendor/bootstrap-slider.min.js"></script>
+    <script src="js/vendor/powerrange.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

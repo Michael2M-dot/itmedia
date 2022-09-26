@@ -1,0 +1,18 @@
+:root {
+  /* background */
+  --bg-main: #E5E5E5;
+  --bg-pink: #D23B60;
+  --bg-red: #AD2446;
+  --bg-white:#fff;
+  --bg-lightgray: #D8E1EA;
+  --bg-gray:#999;
+  --bg-darkblue: #242459;
+  --bg-yellow: #f3f3c9;
+
+  /* font colors */
+  --text-red: #D23B60;
+  --text-white: #fff;
+  --text-blue: #2C4B68;
+  --text-darkgrey:#333333;
+  --text-lightgray:#696969;
+}
