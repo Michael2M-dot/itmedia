@@ -53,12 +53,13 @@ const showPopup = (elm) => {
   elm.classList.toggle('popup_visible');
 }
 
-// слушатели событий на ползунок
+// слушатель событий на ползунок установки месяцев
 rangeMonthsSlider.addEventListener('change', () => {
   setValue(inputMonths, rangeMonthsSlider);
   formInputTime.value = rangeMonthsSlider.value;
 })
 
+// слушатель событий на ползунок установки месяцев
 rangeQtySlider.addEventListener('change', () => {
   setValue(inputQty, rangeQtySlider);
   formInputQty.value = rangeQtySlider.value;
