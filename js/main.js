@@ -49,9 +49,13 @@ formInputDistanse.value = rangeDistance.value;
 formInputTime.value = rangeMonthsSlider.value;
 formInputQty.value = rangeQtySlider.value;
 
-
-const showPopup = (elm) => {
-  elm.classList.toggle('popup_visible');
+// закрытие попапа
+const closePopup = () => {
+  popup.classList.remove('popup_visible');
+}
+// открытие попапа
+const openPopup = () => {
+  popup.classList.add('popup_visible');
 }
 
 // слушатель событий на ползунок установки месяцев
@@ -77,12 +81,15 @@ rangeDistance.addEventListener('change', ()=> {
 
 // слушатель на кнопку расчета
 calcBtn.addEventListener('click', () => {
-  showPopup(popup);
+  openPopup();
 })
 
 // слушатель на кнопку попапа
-popupSubmitBtn.addEventListener('click', () => {
-  // console.log('hi');
+popup.addEventListener('submit', (e) => {
+  e.preventDefault();
+  closePopup();
+// сообщение от отправки формы (показывает что функция сработала)
+  alert('Форма запроса отрправлена!')
 })
 
 checkBox.addEventListener('click', () => {
@@ -97,8 +104,10 @@ checkBox.addEventListener('click', () => {
 
 closePopupBtn.addEventListener('click', () => {
   console.log('up');
+  closePopup();
   popupSubmitBtn.setAttribute('disabled', 'disabled');
   popupSubmitBtn.classList.add('popup__btn_disabled');
   checkBox.checked = false;
-  popup.classList.remove('popup_visible');
 })
+
+// валидация формы

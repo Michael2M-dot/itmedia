@@ -156,7 +156,7 @@
       </div>
       <!-- /.calc -->
       <div class="popup" id="popup">
-          <div class="popup__container">
+          <form class="popup__container">
             <div class="popup__header">
               <p class="icon-phone popup__header-img"></p>
               <h4 class="popup__header-title">Заказать расчет</h4>
@@ -169,13 +169,21 @@
                   <p class="icon-user input__icon"></p>
                   <input type="text" class="input__field" id="user-name" placeholder="Ваше имя" required>
                 </div>
+                <span class="input__error" id="user-name-error">1</span>
               </label>
               <!-- /.input -->
               <label class="input">
                 <div class="input__field-container">
                   <p class="icon-phone input__icon"></p>
-                  <input type="text" class="input__field" id="user-phone" placeholder="Номер телефона" required>
+                  <input
+                    type="tel"
+                    class="input__field"
+                    id="user-phone"
+                    placeholder="Номер телефона"
+                    pattern="\+?[0-9\s\-\(\)]+"
+                    required>
                 </div>
+                <span class="input__error" id="user-name-error">2</span>
               </label>
               <!-- /.input -->
               <label class="input">
@@ -217,10 +225,10 @@
                   <div class="checkbox__title">Я согласен на обработку персональных данных</div>
                 </div>
               </label>
-              <button type="button" class="popup__btn popup__btn_disabled" id="popup-submit-btn" disabled>отправить</button>
+              <button type="submit" class="popup__btn popup__btn_disabled" id="popup-submit-btn" disabled>отправить</button>
             </div>
             <!-- /.input-container -->
-          </div>
+          </form>
           <!-- /.popup__container -->
         </div>
         <!-- /.popup -->
