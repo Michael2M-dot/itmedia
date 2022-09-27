@@ -30,8 +30,8 @@
   position: relative;
   max-width: 775px;
   width: 100%;
-  width: 775px;
-  height: 300px;
+  /* width: 775px; */
+  max-height: 300px;
   margin: 50px auto;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .baner__title-container {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   margin: 0 auto 0 30px;
   display: flex;
@@ -78,10 +78,11 @@
 }
 
 .baner__title-sign {
-  width: 24px;
-  height: 24px;
+  --sign-size: 24px;
+  width: var(--sign-size);
+  height: var(--sign-size);
   margin:0;
-  margin-left: 24px;
+  margin-left: var(--sign-size);
 
 }
 
@@ -98,16 +99,37 @@
   color: var(--text-white);
 }
 
+.baner__price-container {
+  margin-top: 57px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.baner__img {
+  width: 57px;
+  height: 44px;
+}
+
+.baner__img:last-of-type {
+  width: 109px;
+}
 .baner__price {
-  width: 226px;
-  height: 42px;
-  margin: 64px auto auto 97px;
+  /* width: 226px; */
+  /* height: 42px; */
+  /* margin: 64px auto auto 97px; */
+  /* margin-top: 64px; */
+  /* margin-left: 130px; */
+  margin-left: 30px;
+  margin-right: 30px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
   font-size: 26px;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   align-items: center;
   color: var(--text-red);
 }
@@ -879,6 +901,77 @@
     padding: 15px;
   }
 
+  .baner {
+    max-width: 540px;
+  }
+
+  .baner__container {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .baner__title-container {
+    margin-left: 15px;
+  }
+
+  .baner__title-sign {
+    --sign-size: 16px;
+    /* margin-left: 10px; */
+  }
+
+  .baner__subtitle {
+    max-width: 100px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-left: 15px;
+  }
+
+  .baner__title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .baner__price-container {
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+
+  .baner__img {
+    /* display: none; */
+    width: 35px;
+    height: 30px;
+  }
+
+  .baner__img:last-of-type {
+    width: 60px;
+  }
+
+  .baner__price {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .baner__price span {
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  .baner__footer {
+    margin-top: 16px;
+    margin-left: 20px;
+  }
+
+  .baner__footer-img {
+    --size:20px;
+  }
+
+  .baner__footer-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   .calc {
     padding: 20px 30px;
   }
@@ -906,4 +999,29 @@
   /* .calc__select-input {
     width: 768px;
   } */
+}
+
+@media screen and (max-width:480px) {
+  .baner__img {
+    display: none;
+    visibility: hidden;
+  }
+
+  .baner__price {
+    margin-left: 0;
+  }
+
+  .baner__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .baner__price-container {
+    margin-top: 15px;
+  }
+
+  .baner__footer {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }
